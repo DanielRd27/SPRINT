@@ -1,249 +1,255 @@
+/* Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+
 body{
+    /* Tamanho e espaçamento das letras */
     line-height: 1.6;
-    font-size: 16px;
-    background-color: #B5CDE4;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #1E1E1E;
-    
+    font-size: 14px;
+
+    /* Define a fonte da pagina */
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+
+    /* Define a cor da fonte */
+    color: #EEF1FF;
+
+    /* Deixa o scroll da pagina mais lento */
     scroll-behavior: smooth;
+
+    min-height: 100vh;
 }
 
-/* Body dos formularios e tabelas */
-.tabela_form{
-    margin-top: 1rem;
+.index_body {
+    background-image: url(img/pexels-krisof-1252869.jpg);
+    background-size: cover;
 }
 
-/* Body da pagina de login */
-.body_login {
-    margin-top: 0;
-}
-
-.container-login {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-}
-
-header {
-    width: 100%;
-    height: auto;
-    padding: 0.2rem;
-    text-align: center;
-    background-color: #4B8390;
-
+/* Deixa texto em caixa alta */
+.uppercase {
     text-transform: uppercase;
 }
 
-footer {
-    width: 100%;
-    height: 9.5vh;
-    margin-top: 10vh;
-    bottom: 0;
-    background-color: #4B8390;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    text-transform: uppercase;
-
-    position: sticky;
+/* Deixa texto em negrito */
+.bold {
+    font-weight: 800;
 }
 
-.main_paginaPrincipal {
-    padding-top: 1rem;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.main_paginaPrincipal h2 {
-    font-size: 2rem;
-}
-
-.cards-container {
-    margin-bottom: 2vh;
-    width: 70vw;
-
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.card {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 50px;
-
-    width: 40%;
-    height: 30vh;
-    margin: 1rem;
-    padding: 0px 10px;
-    background-color: #f0f0f0;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.card a {
+/* Arrumdo os links */
+a {
+    /* Tira a barrinha azul em baixo dos links */
     text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
+
+    /* Muda a cor do link que originalmente é azul */
+    color: #EEF1FF;
 }
 
-.card h3 {
-    font-size: 1.5rem;
-}
-
-.card span {
-    align-items: center;
-    text-align: center;
-}
-
-form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-}
-
-.container-form {
-    width: 50%;
-    min-width: 10rem;
-    text-align: center;
-    font-size: 1rem;
-}
-
-.input-buttons {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-select, input, button { /* configura os botoes e inputs */
-    height: 3rem;
-    border-radius: 13px;
-    border: none;
-    font-weight: bold;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    font-size: 0.9rem;
-    width: 100%;
-}
-
-.input-buttons a {
-    width: 100%;
-}
-
+/* Deixando os botão mais bonito */
 button {
-    background-color: #4B8390;
-    font-size: 1rem;
-}
-
-.container-button{
-    display: flex;
-    flex: 1;
-    gap: 1rem;
-}
-
-button:hover {
+    /* Faz com q ao passar o mouse apareça o dedinho para clicar */
     cursor: pointer;
 }
 
-input::placeholder{
-    color: #757575;
+/* Configurações para diferentes telas */
+
+@media screen and (min-width:1200px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    *{
+        font-size: 16px;
+    }
+
 }
 
-select {
-    color: #757575;
-}
+@media (min-width:1200px) {
+    .container {
+        width: 1100px;
+    }
 
-select option {
-    color: #757575;
-}
-
-select:hover{
-    cursor: pointer;
-}
-
-.button_tabelas {
-    padding-top: 1rem;
-    display: flex;
-    justify-content: center;
-}
-
-.button_tabelas a {
-    max-width: 30%;
-    width: 30%;
-}
-
-/* TABELAAAAAAAA AAAAAAAAAAAAAAAAAAAA */
-
-.container-table {
-    margin-top: 8.7vh;
-    flex: 1;
-    margin-left: 1rem;
-    margin-right: 1rem;
-
-    overflow-x: auto;
-}
-
-table{
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-}
-
-thead {
-    color: #f0f0f0;
-    background-color: rgb(1, 63, 87);
-}
-
-thead th:first-child{
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
-}
-
-tbody {
-    background-color: rgb(231, 238, 241);
-}
-
-tbody tr th{
-    color: #f0f0f0;
-    background-color: rgb(15, 117, 158);
-}
-
-td, th {
-    border: 1px solid black;
-    text-align: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-weight: 400;   
-    font-size: 1rem;
-}
-
-.nome_produto {
-    text-align: start;
-    padding-left: 1rem;
-}
-
-@media only screen and (max-width: 600px) {
-    body{
+    *{
         font-size: 14px;
     }
 
-    .card {
-        width: 80%;
+}
+
+@media (min-width:991px) and (max-width:1199px){
+    .container {
+        width: 950px;
+    }
+
+    *{
+        font-size: 14px;
     }
 }
+
+@media (min-width:768px) and (max-width: 991px){
+    .container {
+        width: 750px;
+    }
+
+    *{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 750px;
+    }
+
+    *{
+        font-size: 10px;
+    }
+}
+
+/* Limita o tamanho do conteudo da pagina para melhor responsavidade */
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* HEADER COMEÇANDO AAAAAAAAAAAAAAAAAAAAA NÃO AGUENTO MAIS */
+
+    header{
+        /* Cor do fundo */
+        backdrop-filter: blur(2px);
+    }
+
+    header .container {
+        /* Arruma o posicionamento dos elementos dentro de Header */
+        display: flex;
+        flex-direction: row;
+
+        /* Alinha os itens verticalmente (ficam no msm valor Y) */
+        align-items: center;    
+
+        /* Dá um espaçamento igual entro os itens e ao redor deles */
+        justify-content: space-between;
+
+        /* Cria um espaçamento entre a borda e o conteudo denntro do Header */
+        /* 0.5rem em cima e em baixo e 2rem na direita e esquerda */
+        padding: 0.5rem 2rem;
+    }
+
+    .logo_nome {
+        /* Aumenta o tamanho das letras da Logo */
+        font-size: 2rem;
+    }
+
+    nav {
+        /* Aumenta o tamanho das letra dentro do nav */
+        font-size: 1.5rem;
+
+        padding-right: 2.5rem;
+
+        /* Organiza os itens dentro do nav */
+        display: flex;
+        
+        /* Defne um espaçamento entro os elementos */
+        gap: 2rem;
+    }
+
+/* HEARDER FINALIZADO AMEM AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA espero que nao de erro no futuro */
+
+/* MAIN DA PAGINA INDEX lembrando que é da pagina index */
+
+    main {
+        /* Cacula o tamanho da tela - o tamnho do footer + hearder */
+        height: calc(100vh - 7.2rem);
+    }
+
+    .main_index .container {
+        /* Ocupa 100% do espaço permitido */
+        height: 100%;
+
+        /* Organiza os elementos */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        /* Espaçamento */
+        padding-top: 2rem;
+
+        text-align: center;
+    }
+
+    /* Define o tamanho para o H1 */
+    main h1 {
+        font-size: 3.5rem;
+    }
+
+    /* Limita o tamanho da section dentro do main */
+    .elemento_principal_index {
+        height: 100%;
+        padding: 0.5rem 14rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /* Define uma margem lateral do primeiro filho do elemento pai */
+    .elemento_principal_index :nth-child(1) p{
+        font-weight: 200;
+    }
+
+    /* Define uma margem na parte de baixo do segundo filho do elemento pai */
+    .elemento_principal_index :nth-child(2) {
+        margin-bottom: 2rem;
+    }
+    
+    .fundo-blur {
+        border-radius: 20px;
+        padding: 2rem 1rem;
+        backdrop-filter: blur(30px);
+    }
+
+    .elemento_principal_index button {
+        /* Muda a cor do botão */
+        background-color: #B5CDE4;
+
+        /* Tira a borda feia do botão */
+        border: none;
+        border-radius: 5px;
+
+        /* Define tamanho */
+        width: 100%;
+        height: 5rem;
+
+        font-size: 1.7rem;
+
+        margin-top: 1rem;
+    }
+
+/* Cabo a parte do main index */
+
+/* FOOTER */
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+
+        backdrop-filter: blur(10px);
+        color: #ffffff;
+        padding: 0.5rem;
+
+        height: 3rem;
+
+        display: flex;
+        align-items: center;
+    }
+
+/* Fim footer */
