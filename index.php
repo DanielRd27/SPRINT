@@ -6,15 +6,16 @@
     <link rel="stylesheet" href="style.css">
     <title>Login FutureByte</title>
 </head>
-<body class="index_body">
+<body class="imagem_fundo">
     <header>
-        <div class="container">
+        <div class="logo_container">
             <div class="Logo">
+                <img src="img/logo.png" alt="">
                 <p class="logo_nome uppercase bold">FutureByte</p>
             </div>
 
             <nav>
-                <a href="#" class="uppercase bold">Sobre</a>
+                <a href="index.php" class="uppercase bold">Sobre</a>
                 <a href="#" class="uppercase bold">Contato</a>
                 <a href="login.php" class="uppercase bold">Login</a>
             </nav>
@@ -28,8 +29,9 @@
 
             <!-- Section para separar um tamanho especifico para o bloco -->
             <section class="elemento_principal_index">
-                <section class="fundo-blur">
+                <section class="descrição_index">
                     <!-- Descrição da empresa -->
+                    <div class="fundo-transparente_index"></div>
                     <p>FutureByte oferece uma plataforma ideal para gerenciar, armazenar e organizar os dados da sua empresa. Simplifique a gestão de seus fornecedores e produtos, ganhando eficiência e controle nas suas operações. Experimente a FutureByte e descubra como podemos transformar a maneira como você faz negócios!</p>
                 </section>
 
@@ -38,7 +40,7 @@
                     <p class="bold">Clique aqui para organizar sua vida e empresa!!</p>
 
                     <!-- Link para redirecionar para a Pagina de Cadastro -->
-                    <a href="#">    
+                    <a href="cadastro.php">    
                         <!-- Botão chamativo para fazer o Cadastro -->
                         <button class="uppercase bold botão_redirecionarCadastro">Crie uma conta e começe já !!</button>
                     </a>

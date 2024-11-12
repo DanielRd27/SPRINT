@@ -27,7 +27,8 @@ body{
     min-height: 100vh;
 }
 
-.index_body {
+/* fundo imagem */
+.imagem_fundo {
     background-image: url(img/pexels-krisof-1252869.jpg);
     background-size: cover;
 }
@@ -64,6 +65,10 @@ button {
         max-width: 1200px;
     }
 
+    .logo_container {
+        max-width: 1200px;
+    }
+
     *{
         font-size: 16px;
     }
@@ -72,6 +77,10 @@ button {
 
 @media (min-width:1200px) {
     .container {
+        width: 1100px;
+    }
+
+    .logo_container {
         width: 1100px;
     }
 
@@ -86,6 +95,10 @@ button {
         width: 950px;
     }
 
+    .logo_container {
+        width: 950px;
+    }
+
     *{
         font-size: 14px;
     }
@@ -96,6 +109,10 @@ button {
         width: 750px;
     }
 
+    .logo_container {
+        width: 750px;
+    }
+
     *{
         font-size: 10px;
     }
@@ -103,6 +120,10 @@ button {
 
 @media (max-width: 768px) {
     .container {
+        width: 750px;
+    }
+
+    .logo_container {
         width: 750px;
     }
 
@@ -123,10 +144,26 @@ button {
 
     header{
         /* Cor do fundo */
-        backdrop-filter: blur(2px);
+        backdrop-filter: blur(4px);
     }
 
-    header .container {
+    header img {
+        max-width: 5rem;
+    }
+
+    .logo_container {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 0px;
+    }
+
+    .Logo {
+        display: flex;
+        align-items: center;
+    }
+
+    header .logo_container {
         /* Arruma o posicionamento dos elementos dentro de Header */
         display: flex;
         flex-direction: row;
@@ -139,7 +176,7 @@ button {
 
         /* Cria um espaçamento entre a borda e o conteudo denntro do Header */
         /* 0.5rem em cima e em baixo e 2rem na direita e esquerda */
-        padding: 0.5rem 2rem;
+        padding: 0rem 2rem;
     }
 
     .logo_nome {
@@ -201,11 +238,13 @@ button {
 
     /* Define uma margem lateral do primeiro filho do elemento pai */
     .elemento_principal_index :nth-child(1) p{
+        text-align:center;
         font-weight: 200;
+        font-size: 1.1rem;
     }
 
     /* Define uma margem na parte de baixo do segundo filho do elemento pai */
-    .elemento_principal_index :nth-child(2) {
+    .elemento_principal_index button {
         margin-bottom: 2rem;
     }
     
@@ -213,6 +252,12 @@ button {
         border-radius: 20px;
         padding: 2rem 1rem;
         backdrop-filter: blur(30px);
+    }
+
+    .descrição_index{
+        border-radius: 20px;
+        padding: 2rem 1rem;
+        background-color: rgba(0, 0, 0, 0.3);
     }
 
     .elemento_principal_index button {
@@ -233,6 +278,91 @@ button {
     }
 
 /* Cabo a parte do main index */
+
+
+/* Main LOGIN AAAAAAAAAAAA TEM MT AINDA MEU DEUS */
+
+    .login_container {
+        /* Ocupa 100% do espaço */
+        height: 100%;
+
+        /* Deixa tudo no meio */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card_login {
+        /* Centraliza e deixa na ordem certa */
+        display: flex;
+        flex-direction: column;
+
+        text-align: center;
+
+        /* Fundo meio transparente */
+        background-color: rgba(27, 46, 62, 0.65);
+        padding: 2rem 8rem;
+
+        /* Bordinha */
+        border-radius: 50px;
+    }
+
+    /* Arrumando o forma */
+    form {
+        display: flex;
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    /* Deixa a mensagem de erro vermelha */
+    .error {
+        color: red;
+    }
+
+    /* Deixa a mensagem de sucesso verde */
+    .message {
+        color: green;
+    }
+
+    .card_login * {
+        margin-top: 1rem;
+    }
+
+    /* Titulo do login */
+    .card_login h1 {
+        font-size: 3rem;
+    }
+
+    .noMargin {
+        margin: 0;
+    }
+
+    .card_login input, button {
+        padding: 1rem;
+
+        /* Bordinha */
+        border-radius: 50px;
+        border: none;
+
+        /* Fundinho */
+        background-color: #D0E5F2;
+    }
+
+/* Main LOGIN AAAAAAAAAAAA TEM MT AINDA MEU DEUS */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* FOOTER */
 
