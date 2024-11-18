@@ -27,10 +27,15 @@ body{
     min-height: 100vh;
 }
 
-/* fundo imagem */
+/* fundo Body com imagem */
 .imagem_fundo {
     background-image: url(img/pexels-krisof-1252869.jpg);
     background-size: cover;
+}
+
+/* Cor de fundo Body normal */
+.fundo_normal {
+    background-color: #B5CDE4;
 }
 
 /* Deixa texto em caixa alta */
@@ -142,8 +147,11 @@ button {
 
 /* HEADER COMEÇANDO AAAAAAAAAAAAAAAAAAAAA NÃO AGUENTO MAIS */
 
-    header{
-        /* Cor do fundo */
+    .fundo_headerNormal {
+        background-color: #343333;
+    }
+
+    .fundo_headerTransparente {
         backdrop-filter: blur(4px);
     }
 
@@ -199,14 +207,14 @@ button {
 
 /* HEARDER FINALIZADO AMEM AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA espero que nao de erro no futuro */
 
-/* MAIN DA PAGINA INDEX lembrando que é da pagina index */
+/* MAIN DA PAGINA Sobre*/
 
     main {
         /* Cacula o tamanho da tela - o tamnho do footer + hearder */
         height: calc(100vh - 7.2rem);
     }
 
-    .main_index .container {
+    .main_sobre .container {
         /* Ocupa 100% do espaço permitido */
         height: 100%;
 
@@ -227,7 +235,7 @@ button {
     }
 
     /* Limita o tamanho da section dentro do main */
-    .elemento_principal_index {
+    .elemento_principal_sobre {
         height: 100%;
         padding: 0.5rem 14rem;
 
@@ -237,14 +245,14 @@ button {
     }
 
     /* Define uma margem lateral do primeiro filho do elemento pai */
-    .elemento_principal_index :nth-child(1) p{
+    .elemento_principal_sobre :nth-child(1) p{
         text-align:center;
         font-weight: 200;
         font-size: 1.1rem;
     }
 
     /* Define uma margem na parte de baixo do segundo filho do elemento pai */
-    .elemento_principal_index button {
+    .elemento_principal_sobre button {
         margin-bottom: 2rem;
     }
     
@@ -254,13 +262,13 @@ button {
         backdrop-filter: blur(30px);
     }
 
-    .descrição_index{
+    .descrição_sobre{
         border-radius: 20px;
         padding: 2rem 1rem;
         background-color: rgba(0, 0, 0, 0.3);
     }
 
-    .elemento_principal_index button {
+    .elemento_principal_sobre button {
         /* Muda a cor do botão */
         background-color: #B5CDE4;
 
@@ -277,7 +285,7 @@ button {
         margin-top: 1rem;
     }
 
-/* Cabo a parte do main index */
+/* Cabo a parte do Sobre  */
 
 
 /* Main LOGIN AAAAAAAAAAAA TEM MT AINDA MEU DEUS */
@@ -352,34 +360,158 @@ button {
 /* Main LOGIN AAAAAAAAAAAA TEM MT AINDA MEU DEUS */
 
 
+/* Main index */
+
+.main_index {
+    /* Troca a cor da letra */
+    color: #010101;
+
+    /* Centraliza os itens */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    margin-bottom: 3rem;
+}
+
+.main_index h2 {
+    font-size: 1.5rem;
+}
+
+.bemvindo_index {
+    margin-top: 0.5rem;
+}
+
+.cardsIndex_container {
+    /* Arruma os elemetos */
+    display: flex;
+    justify-content: space-around;
+
+    flex-wrap: wrap;
+}
+
+.cardIndex {
+    background-color: #FFFFFF;
+    padding: 1rem;
+    padding-top: 0.5rem;
+
+    width: 45%;
+    height: 13.5rem;
+
+    margin-top: 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    border-radius: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    overflow: hidden;
+}
+
+.cardIndex h2{
+    
+    width: 100%;
+    text-align: center;
+}
+
+.conteudo_card {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 0.3rem;
+}
+
+.conteudo_card .img_container {
+    background-color: #4B8390;
+
+    width: 12rem;
+    height: 100%;
+
+    margin-right: 1rem;
+    padding: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 60px;
+}
+
+.conteudo_card img {
+    width: 5rem;
+    height: auto;
+}
+
+.text_card {
+    width: 50%;
+
+    margin-right: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.text_card p {
+    width: 100%;
+
+    line-height: 0.9rem;
+
+    font-size: 0.8rem;
+    text-align: center;
+
+    margin-bottom: 0.5rem;
+}
+
+.text_card button {
+    width: 100%;
+
+    font-size: 1.5rem;
+    background-color: #237BFF;
+    color: #D0E5F2;
+    
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+
+}
 
 
 
 
 
+/* FOOTER (UNIVERSAL)*/
 
-
-
-
-
-
-
-/* FOOTER */
-
+    /* Configuraçao correta do footer */
     footer {
+        /* Deixa ele la em baixo */
         position: fixed;
         bottom: 0;
         width: 100%;
         text-align: center;
 
-        backdrop-filter: blur(10px);
+        /* Arruma a cor das letras e cria um espaçamento */
         color: #ffffff;
         padding: 0.5rem;
 
+        /* Altura fixa */
         height: 3rem;
 
+        /* Deixa os itens no centro */
         display: flex;
         align-items: center;
+    }
+
+
+    .fundo_footerNormal {
+        background-color: #343333;
+    }
+
+    /* Footer com fundo transparente */
+    .fundo_footerTransparente {
+        backdrop-filter: blur(10px);
     }
 
 /* Fim footer */

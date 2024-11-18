@@ -47,7 +47,7 @@ include('valida_sessao.php');
 
                         <div class="text_card">
                             <p>Adicione rapidamente novos fornecedores preenchendo informações como nome, endereço e contato, mantendo o cadastro sempre atualizado para facilitar a gestão.</p>
-                            <a href="cadastro_fornecedor.php"><button class="uppercase bold">Cadastrar</button></a>
+                            <a href=""><button class="uppercase bold">Cadastrar</button></a>
                         </div>
                     </div>
                 </div>
@@ -64,38 +64,6 @@ include('valida_sessao.php');
                         <div class="text_card">
                             <p>Registre novos produtos com facilidade. Informe detalhes como nome, descrição, preço e quantidade em estoque. Organize seu inventário de forma eficiente.</p>
                             <a href=""><button class="uppercase bold">Cadastrar</button></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="cardIndex">
-                    <h2 class="bold uppercase">Tabela de Fornecedores</h2>
-                    <div class="conteudo_card">
-                        
-                        <div class="img_container">
-                            <img src="img/conference.png" alt="">
-                        </div>
-
-                        <div class="text_card">
-                            <p>Visualize e gerencie seus fornecedores em uma tabela prática. Consulte informações detalhadas e faça alterações conforme necessário para garantir um relacionamento eficaz.</p>
-                            <a href=""><button class="uppercase bold">Ver Tabela</button></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="cardIndex">
-                    <h2 class="bold uppercase">Tabela de Produtos</h2>
-                    <div class="conteudo_card">
-                        
-                        <div class="img_container">
-                            <img src="img/table.png" alt="">
-                        </div>
-
-                        <div class="text_card">
-                            <p>Acesse sua lista de produtos de forma rápida e fácil. Monitore estoque, preços e descrições, facilitando a tomada de decisão e o gerenciamento de inventário.</p>
-                            <a href=""><button class="uppercase bold">Ver Tabela</button></a>
                         </div>
                     </div>
                 </div>

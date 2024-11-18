@@ -36,38 +36,6 @@ include('valida_sessao.php');
             <h2 class="bold uppercase bemvindo_index">Bem-vindo, <?php echo $_SESSION['usuario']; ?></h2>
 
             <section class="cardsIndex_container">
-                <!-- Card 1 -->
-                <div class="cardIndex">
-                    <h2 class="bold uppercase">registrar Fornecedor</h2>
-                    <div class="conteudo_card">
-
-                        <div class="img_container">
-                            <img src="img/user.png" alt="">
-                        </div>
-
-                        <div class="text_card">
-                            <p>Adicione rapidamente novos fornecedores preenchendo informações como nome, endereço e contato, mantendo o cadastro sempre atualizado para facilitar a gestão.</p>
-                            <a href="cadastro_fornecedor.php"><button class="uppercase bold">Cadastrar</button></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="cardIndex">
-                    <h2 class="bold uppercase">Cadastrar Produto</h2>
-                    <div class="conteudo_card">
-                        
-                        <div class="img_container">
-                            <img src="img/add.png" alt="">
-                        </div>
-
-                        <div class="text_card">
-                            <p>Registre novos produtos com facilidade. Informe detalhes como nome, descrição, preço e quantidade em estoque. Organize seu inventário de forma eficiente.</p>
-                            <a href=""><button class="uppercase bold">Cadastrar</button></a>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Card 3 -->
                 <div class="cardIndex">
                     <h2 class="bold uppercase">Tabela de Fornecedores</h2>

@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Se o usuário for encontrado, armazena seu nome na sessão.
         $_SESSION['usuario'] = $usuario;
         // Redireciona o usuário para a página inicial.
-        header('Location: paginaPrinciapal.php');
+        header('Location: index.php');
     } else {
         // Se o login falhar, define uma mensagem de erro.
         $error = "Usuário ou senha inválidos.";
@@ -40,8 +40,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Login FutureByte</title>
 </head>
 <body class="imagem_fundo">
-    <header>
-        <div class="logo_container">
+    <header class="fundo_headerTransparente">
+        <div class="logo_container fundo_headerTransparente">
             <div class="Logo">
                 <img src="img/logo.png" alt="">
                 <p class="logo_nome uppercase bold">FutureByte</p>
@@ -80,12 +80,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </form>
 
                 <!-- Redirecionar para a pagina de cadastro -->
-                <p><i>Não Tem Uma Conta Ainda?</i> <a href="cadastro.php"><i><u>Crie Uma</u></i></a></p>
+                <p><i>Não Tem Uma Conta Ainda?</i> <a href="cadastro_usuario.php"><i><u>Crie Uma</u></i></a></p>
             </div>
         </div>
     </main>
 
-    <footer>
+    <footer class="fundo_footerTransparente">
         <div class="container">
             <p>FutureByte © 2024 - Todos os direitos reservados</p>
         </div>

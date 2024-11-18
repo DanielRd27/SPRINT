@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body class="imagem_fundo">
     <header>
-        <div class="logo_container">
+        <div class="logo_container fundo_headerTransparente">
             <div class="Logo">
                 <img src="img/logo.png" alt="">
                 <p class="logo_nome uppercase bold">FutureByte</p>
@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <a href="login.php" class="uppercase bold">Login</a>
             </nav>
         </div>
-    </header>
+    </header class="fundo_headerTransparente">
 
     <main>
         <div class="container login_container">
@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
     </main>
 
-    <footer>
+    <footer class="fundo_footerTransparente">
         <div class="container">
             <p>FutureByte © 2024 - Todos os direitos reservados</p>
         </div>
