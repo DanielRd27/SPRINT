@@ -31,6 +31,7 @@ body{
 .imagem_fundo {
     background-image: url(img/pexels-krisof-1252869.jpg);
     background-size: cover;
+    background-attachment: fixed;
 }
 
 /* Cor de fundo Body normal */
@@ -152,7 +153,7 @@ button {
     }
 
     .fundo_headerTransparente {
-        backdrop-filter: blur(4px);
+        backdrop-filter: blur(1px);
     }
 
     header img {
@@ -323,16 +324,6 @@ button {
         text-align: center;
     }
 
-    /* Deixa a mensagem de erro vermelha */
-    .error {
-        color: red;
-    }
-
-    /* Deixa a mensagem de sucesso verde */
-    .message {
-        color: green;
-    }
-
     .card_login * {
         margin-top: 1rem;
     }
@@ -351,7 +342,7 @@ button {
 
         /* Bordinha */
         border-radius: 50px;
-        border: none;
+        border: none;   
 
         /* Fundinho */
         background-color: #D0E5F2;
@@ -362,120 +353,223 @@ button {
 
 /* Main index */
 
-.main_index {
-    /* Troca a cor da letra */
-    color: #010101;
+    main {
+        /* Troca a cor da letra */
+        color: #ffffff ;
 
-    /* Centraliza os itens */
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+        /* Centraliza os itens */
+        display: flex;
+        flex-direction: column;
+        text-align: center;
 
-    margin-bottom: 3rem;
-}
+        margin-bottom: 3rem;
+    }
 
-.main_index h2 {
+    .main_index h2 {
+        font-size: 1.5rem;
+    }
+
+    .bemvindo_index {
+        margin-top: 0.5rem;
+    }
+
+    .cardsIndex_container {
+        /* Arruma os elemetos */
+        display: flex;
+        justify-content: space-around;
+
+        flex-wrap: wrap;
+    }
+
+    .cardIndex {
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 1rem;
+        padding-top: 0.5rem;
+
+        width: 45%;
+        height: 13.5rem;
+
+        margin-top: 1rem;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        border-radius: 40px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        overflow: hidden;
+    }
+
+    .cardIndex h2{
+        
+        width: 100%;
+        text-align: center;
+    }
+
+    .conteudo_card {
+        display: flex;
+
+        justify-content: space-between;
+
+        margin-top: 0.3rem;
+    }
+
+    .conteudo_card .img_container {
+        background-color: #4B8390;
+
+        width: 12rem;
+        height: 100%;
+
+        margin-right: 1rem;
+        padding: 2rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 60px;
+    }
+
+    .conteudo_card img {
+        width: 5rem;
+        height: auto;
+    }
+
+    .text_card {
+        width: 50%;
+
+        margin-right: 2rem;
+
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .text_card p {
+        width: 100%;
+
+        line-height: 0.9rem;
+
+        font-size: 0.8rem;
+        text-align: center;
+
+        margin-bottom: 0.5rem;
+    }
+
+    .text_card button {
+        width: 100%;
+
+        font-size: 1.5rem;
+        background-color: #237BFF;
+        color: #D0E5F2;
+        
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
+
+    }
+
+/* Fim main index */
+
+/* Começo do form (tirando login e cadastro de usuario) (formularios pos Login) */
+
+.formulario h2, .tabela h2 {
+    padding: 1rem;
     font-size: 1.5rem;
 }
 
-.bemvindo_index {
-    margin-top: 0.5rem;
-}
-
-.cardsIndex_container {
-    /* Arruma os elemetos */
-    display: flex;
-    justify-content: space-around;
-
-    flex-wrap: wrap;
-}
-
-.cardIndex {
-    background-color: #FFFFFF;
-    padding: 1rem;
-    padding-top: 0.5rem;
-
-    width: 45%;
-    height: 13.5rem;
-
-    margin-top: 1rem;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    
-    border-radius: 40px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-    overflow: hidden;
-}
-
-.cardIndex h2{
-    
-    width: 100%;
-    text-align: center;
-}
-
-.conteudo_card {
-    display: flex;
-
-    justify-content: space-between;
-
-    margin-top: 0.3rem;
-}
-
-.conteudo_card .img_container {
-    background-color: #4B8390;
-
-    width: 12rem;
-    height: 100%;
-
-    margin-right: 1rem;
+.formularios_posLogin {
+    background-color: rgba(27, 46, 62, 0.65);
     padding: 2rem;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 0 5rem;
 
-    border-radius: 60px;
+    border-radius: 20px;
+    align-items: start;
 }
 
-.conteudo_card img {
-    width: 5rem;
-    height: auto;
-}
-
-.text_card {
-    width: 50%;
-
-    margin-right: 2rem;
-
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-}
-
-.text_card p {
+.formularios_posLogin input, select, textarea {
     width: 100%;
-
-    line-height: 0.9rem;
-
-    font-size: 0.8rem;
-    text-align: center;
-
-    margin-bottom: 0.5rem;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Borda branca translúcida */
+    border-radius: 4px;
+    background-color: transparent; /* Fundo transparente */
+    color: white; /* Texto branco */
+    outline: none; /* Remove a linha de foco padrão */
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.text_card button {
-    width: 100%;
+.formularios_posLogin input:focus, select:focus, textarea:focus {
+    border-color: white; /* Borda mais clara ao focar */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8); /* Glow ao focar */
+}
 
-    font-size: 1.5rem;
+.formularios_posLogin input::placeholder, select::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5); /* Placeholder translúcido */
+}
+
+option {
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color: #1b2e3e;
+    border-radius: 5px;
+}
+
+.obs {
+    height: 5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: white; /* Cor do texto do rótulo */
+}
+
+.formularios_posLogin button {
     background-color: #237BFF;
-    color: #D0E5F2;
-    
-    padding-top: 0.7rem;
-    padding-bottom: 0.7rem;
+    color: #000000;
+    padding: 1rem;
+    width: 10rem;
 
+    border-radius: 5px;
+}
+
+.actions {
+    text-align: start;
+}
+
+.actions button {
+    background-color: #237BFF;
+    padding: 0.5rem;
+    width: 10rem;
+
+    border-radius: 5px;
+}
+
+.actions a {
+    color: #000000;
+}
+
+.tabela {
+    margin-bottom: 3.5rem;
+}
+
+.error, .success {
+    margin: 2rem 5rem;
+    padding: 1rem;
+
+    background-color: rgba(27, 46, 62, 0.65);
+
+    border-radius: 20px;
+}
+
+.success {
+    color: rgb(4, 196, 255)  ;
+}
+
+.error {
+    color: red;
 }
 
 
@@ -502,6 +596,7 @@ button {
         /* Deixa os itens no centro */
         display: flex;
         align-items: center;
+        
     }
 
 
@@ -515,3 +610,40 @@ button {
     }
 
 /* Fim footer */
+
+
+/* Estilos para tabelas (Universal) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #333333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+/* Estilos para imagens */
+.thumbnail {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.update-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}

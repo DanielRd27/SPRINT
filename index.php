@@ -14,9 +14,9 @@ include('valida_sessao.php');
     <link rel="stylesheet" href="style.css">
     <title>Login FutureByte</title>
 </head>
-<body class="fundo_normal">
-    <header class="fundo_headerNormal">
-        <div class="logo_container fundo_headerNormal">
+<body class="imagem_fundo">
+    <header class="fundo_headerTransparente">
+        <div class="logo_container fundo_headerTransparente">
             <div class="Logo">
                 <img src="img/logo.png" alt="">
                 <p class="logo_nome uppercase bold">FutureByte</p>
@@ -63,7 +63,7 @@ include('valida_sessao.php');
 
                         <div class="text_card">
                             <p>Registre novos produtos com facilidade. Informe detalhes como nome, descrição, preço e quantidade em estoque. Organize seu inventário de forma eficiente.</p>
-                            <a href=""><button class="uppercase bold">Cadastrar</button></a>
+                            <a href="cadastro_produto.php"><button class="uppercase bold">Cadastrar</button></a>
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@ include('valida_sessao.php');
 
                         <div class="text_card">
                             <p>Visualize e gerencie seus fornecedores em uma tabela prática. Consulte informações detalhadas e faça alterações conforme necessário para garantir um relacionamento eficaz.</p>
-                            <a href=""><button class="uppercase bold">Ver Tabela</button></a>
+                            <a href="listagem_fornecedores.php"><button class="uppercase bold">Ver Tabela</button></a>
                         </div>
                     </div>
                 </div>
@@ -95,7 +95,7 @@ include('valida_sessao.php');
 
                         <div class="text_card">
                             <p>Acesse sua lista de produtos de forma rápida e fácil. Monitore estoque, preços e descrições, facilitando a tomada de decisão e o gerenciamento de inventário.</p>
-                            <a href=""><button class="uppercase bold">Ver Tabela</button></a>
+                            <a href="listagem_produtos.php"><button class="uppercase bold">Ver Tabela</button></a>
                         </div>
                     </div>
                 </div>
@@ -103,7 +103,7 @@ include('valida_sessao.php');
         </div>
     </main>
 
-    <footer class="fundo_footerNormal">
+    <footer class="fundo_footerTransparente">
         <div class="container ">
             <p>FutureByte © 2024 - Todos os direitos reservados</p>
         </div>

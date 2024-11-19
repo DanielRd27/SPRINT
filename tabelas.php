@@ -14,9 +14,9 @@ include('valida_sessao.php');
     <link rel="stylesheet" href="style.css">
     <title>Login FutureByte</title>
 </head>
-<body class="fundo_normal">
-    <header class="fundo_headerNormal">
-        <div class="logo_container fundo_headerNormal">
+<body class="imagem_fundo">
+    <header class="fundo_headerTransparente">
+        <div class="logo_container fundo_headerTransparente">
             <div class="Logo">
                 <img src="img/logo.png" alt="">
                 <p class="logo_nome uppercase bold">FutureByte</p>
@@ -36,6 +36,7 @@ include('valida_sessao.php');
             <h2 class="bold uppercase bemvindo_index">Bem-vindo, <?php echo $_SESSION['usuario']; ?></h2>
 
             <section class="cardsIndex_container">
+
                 <!-- Card 3 -->
                 <div class="cardIndex">
                     <h2 class="bold uppercase">Tabela de Fornecedores</h2>
@@ -47,7 +48,7 @@ include('valida_sessao.php');
 
                         <div class="text_card">
                             <p>Visualize e gerencie seus fornecedores em uma tabela prática. Consulte informações detalhadas e faça alterações conforme necessário para garantir um relacionamento eficaz.</p>
-                            <a href=""><button class="uppercase bold">Ver Tabela</button></a>
+                            <a href="listagem_fornecedores.php"><button class="uppercase bold">Ver Tabela</button></a>
                         </div>
                     </div>
                 </div>
@@ -63,7 +64,7 @@ include('valida_sessao.php');
 
                         <div class="text_card">
                             <p>Acesse sua lista de produtos de forma rápida e fácil. Monitore estoque, preços e descrições, facilitando a tomada de decisão e o gerenciamento de inventário.</p>
-                            <a href=""><button class="uppercase bold">Ver Tabela</button></a>
+                            <a href="listagem_produtos.php"><button class="uppercase bold">Ver Tabela</button></a>
                         </div>
                     </div>
                 </div>
@@ -71,7 +72,7 @@ include('valida_sessao.php');
         </div>
     </main>
 
-    <footer class="fundo_footerNormal">
+    <footer class="fundo_footerTransparente">
         <div class="container ">
             <p>FutureByte © 2024 - Todos os direitos reservados</p>
         </div>

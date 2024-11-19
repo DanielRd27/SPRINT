@@ -14,9 +14,9 @@ include('valida_sessao.php');
     <link rel="stylesheet" href="style.css">
     <title>Login FutureByte</title>
 </head>
-<body class="fundo_normal">
-    <header class="fundo_headerNormal">
-        <div class="logo_container fundo_headerNormal">
+<body class="imagem_fundo">
+    <header class="fundo_headerTransparente">
+        <div class="logo_container fundo_headerTransparente">
             <div class="Logo">
                 <img src="img/logo.png" alt="">
                 <p class="logo_nome uppercase bold">FutureByte</p>
@@ -47,7 +47,7 @@ include('valida_sessao.php');
 
                         <div class="text_card">
                             <p>Adicione rapidamente novos fornecedores preenchendo informações como nome, endereço e contato, mantendo o cadastro sempre atualizado para facilitar a gestão.</p>
-                            <a href=""><button class="uppercase bold">Cadastrar</button></a>
+                            <a href="cadastro_fornecedor.php"><button class="uppercase bold">Cadastrar</button></a>
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@ include('valida_sessao.php');
 
                         <div class="text_card">
                             <p>Registre novos produtos com facilidade. Informe detalhes como nome, descrição, preço e quantidade em estoque. Organize seu inventário de forma eficiente.</p>
-                            <a href=""><button class="uppercase bold">Cadastrar</button></a>
+                            <a href="cadastro_produto.php"><button class="uppercase bold">Cadastrar</button></a>
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@ include('valida_sessao.php');
         </div>
     </main>
 
-    <footer class="fundo_footerNormal">
+    <footer class="fundo_footerTransparente">
         <div class="container ">
             <p>FutureByte © 2024 - Todos os direitos reservados</p>
         </div>

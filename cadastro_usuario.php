@@ -80,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     <!-- Exibe a mensagem de erro, se houver. -->
                     <?php
-                        if (isset($mensagem)) echo "<p class='message " . (strpos($mensagem, 'Erro') !== false ? "error" : "success") . "'>$mensagem</p>";
+                        if (isset($mensagem)) echo "<p class='message' " . (strpos($mensagem, 'Erro') !== false ? "error" : "success") . "'>$mensagem</p>";
                         if (isset($mensagem_erro)) echo "<p class='error'>$mensagem_erro</p>";
                     ?>
                 </form>
