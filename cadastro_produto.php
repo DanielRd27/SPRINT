@@ -77,6 +77,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = $_POST['nome'];
     $descricao = $_POST['descricao'];
     $preco = str_replace(',', '.', $_POST['preco']); // Converte vírgula para ponto
+    $codigo = $_POST['codigo'];
+    $quantidade = $_POST['quantidade'];
 
     // Processa o upload da imagem
     $imagem = "";
@@ -92,8 +94,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Prepara a query SQL para inserção ou atualização
     if ($id) {
         // Se o ID existe, é uma atualização
-        $sql = "UPDATE produtos SET fornecedor_id=?, nome=?, descricao=?, preco=?";
-        $params = [$fornecedor_id, $nome, $descricao, $preco];
+        $sql = "UPDATE produtos SET fornecedor_id=?, nome=?, descricao=?, preco=?, codigo=?, quantidade=?";
+        $params = [$fornecedor_id, $nome, $descricao, $preco, $codigo, $quantidade];
         if($imagem) {
             $sql .= ", imagem=?";
             $params[] = $imagem;
@@ -105,9 +107,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $mensagem = "Produto atualizado com sucesso!";
     } else {
         // Se não há ID, é uma nova inserção
-        $sql = "INSERT INTO produtos (fornecedor_id, nome, descricao, preco, imagem) VALUES (?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO produtos (fornecedor_id, nome, descricao, preco, codigo, quantidade, imagem) VALUES (?, ?, ?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("issss", $fornecedor_id, $nome, $descricao, $preco, $imagem);
+        $stmt->bind_param("issssis", $fornecedor_id, $nome, $descricao, $preco, $codigo, $quantidade, $imagem);
         $mensagem = "Produto cadastrado com sucesso!";
     }
 
@@ -136,7 +138,7 @@ if (isset($_GET['delete_id'])) {
 }
 
 // Busca todos os produtos para listar na tabela
-$produtos = $conn->query("SELECT p.id, p.nome, p.descricao, p.preco, p.imagem, f.nome AS fornecedor_nome FROM produtos p JOIN fornecedores f ON p.fornecedor_id = f.id");
+$produtos = $conn->query("SELECT p.id, p.nome, p.descricao, p.preco, p.imagem, p.codigo, p.quantidade, f.nome AS fornecedor_nome FROM produtos p JOIN fornecedores f ON p.fornecedor_id = f.id");
 
 // Se foi solicitada a edição de um produto, busca os dados dele
 $produto = null;
@@ -197,17 +199,24 @@ $fornecedores = $conn->query("SELECT id, nome FROM fornecedores");
                     <label for="nome">Nome:</label>
                     <input type="text" name="nome" value="<?php echo $produto['nome'] ?? ''; ?>" required>
                     
-                    <label for="descricao">Descrição:</label>
-                    <textarea name="descricao"><?php echo $produto['descricao'] ?? ''; ?></textarea>
-                    
                     <label for="preco">Preço:</label>
                     <input type="text" name="preco" value="<?php echo $produto['preco'] ?? ''; ?>" required>
+
+                    <label for="codigo">Código:</label>
+                    <input type="text" name="codigo" value="<?php echo $produto['codigo'] ?? ''; ?>" required>
+
+                    <label for="quantidade">Quantidade no estoque:</label>
+                    <input type="text" name="quantidade" value="<?php echo $produto['quantidade'] ?? ''; ?>" required>
                     
                     <label for="imagem">Imagem:</label>
                     <input type="file" name="imagem" accept="image/*">
                     <?php if (isset($produto['imagem']) && $produto['imagem']): ?>
                         <img src="<?php echo $produto['imagem']; ?>" alt="Imagem atual do produto" class="update-image">
                     <?php endif; ?>
+
+                    <label for="descricao">Descrição:</label>
+                    <textarea name="descricao"><?php echo $produto['descricao'] ?? ''; ?></textarea>
+
                     <br>
                     <button type="submit"><?php echo $produto ? 'Atualizar' : 'Cadastrar'; ?></button>
                 </form>
@@ -226,9 +235,11 @@ $fornecedores = $conn->query("SELECT id, nome FROM fornecedores");
                     <thead>
                         <tr>
                             <th>ID</th>
+                            <th>Código</th>
                             <th>Nome</th>
                             <th>Descrição</th>
                             <th>Preço</th>
+                            <th>Quantidade</th>
                             <th>Fornecedor</th>
                             <th>Imagem</th>
                             <th>Ações</th>
@@ -238,9 +249,11 @@ $fornecedores = $conn->query("SELECT id, nome FROM fornecedores");
                         <?php while ($row = $produtos->fetch_assoc()): ?>
                         <tr>
                             <td><?php echo $row['id']; ?></td>
+                            <td><?php echo $row['codigo']; ?></td>
                             <td><?php echo $row['nome']; ?></td>
                             <td><?php echo $row['descricao']; ?></td>
                             <td><?php echo 'R$ ' . number_format($row['preco'], 2, ',', '.'); ?></td>
+                            <td><?php echo $row['quantidade']; ?></td>
                             <td><?php echo $row['fornecedor_nome']; ?></td>
                             <td>
                                 <?php if ($row['imagem']): ?>
@@ -250,7 +263,7 @@ $fornecedores = $conn->query("SELECT id, nome FROM fornecedores");
                                 <?php endif; ?>
                             </td>
                             <td>
-                                <a href="?edit_id=<?php echo $row['id']; ?>">Editar</a>
+                                <a href="cadastro_produto.php?edit_id=<?php echo $row['id']; ?>">Editar</a>
                                 <a href="?delete_id=<?php echo $row['id']; ?>" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
                             </td>
                         </tr>

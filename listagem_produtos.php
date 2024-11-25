@@ -70,9 +70,11 @@ if (isset($_GET['edit_id'])) {
                     <thead>
                         <tr>
                             <th>ID</th>
+                            <th>Código</th>
                             <th>Nome</th>
                             <th>Descrição</th>
                             <th>Preço</th>
+                            <th>Quantidade</th>
                             <th>Fornecedor</th>
                             <th>Imagem</th>
                             <th>Ações</th>
@@ -82,9 +84,11 @@ if (isset($_GET['edit_id'])) {
                         <?php while ($row = $produtos->fetch_assoc()): ?>
                         <tr>
                             <td><?php echo $row['id']; ?></td>
+                            <td><?php echo $row['codigo']; ?></td>
                             <td><?php echo $row['nome']; ?></td>
                             <td><?php echo $row['descricao']; ?></td>
                             <td><?php echo 'R$ ' . number_format($row['preco'], 2, ',', '.'); ?></td>
+                            <td><?php echo $row['quantidade']; ?></td>
                             <td><?php echo $row['fornecedor_nome']; ?></td>
                             <td>
                                 <?php if ($row['imagem']): ?>

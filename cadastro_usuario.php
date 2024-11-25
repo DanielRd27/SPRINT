@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
 
             <nav>
-                <a href="index.php" class="uppercase bold">Sobre</a>
+                <a href="sobre.php" class="uppercase bold">Sobre</a>
                 <a href="#" class="uppercase bold">Contato</a>
                 <a href="login.php" class="uppercase bold">Login</a>
             </nav>

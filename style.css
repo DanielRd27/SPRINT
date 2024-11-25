@@ -551,10 +551,6 @@ label {
     color: #000000;
 }
 
-.tabela {
-    margin-bottom: 3.5rem;
-}
-
 .error, .success {
     margin: 2rem 5rem;
     padding: 1rem;
@@ -572,7 +568,7 @@ label {
     color: red;
 }
 
-
+/* Fim form */
 
 
 
@@ -613,37 +609,43 @@ label {
 
 
 /* Estilos para tabelas (Universal) */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-    background-color: #333333;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
-th, td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        background-color: #333333;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-th {
-    background-color: var(--secondary-color);
-    color: #fff;
-}
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
 
-/* Estilos para imagens */
-.thumbnail {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 4px;
-}
+    th {
+        background-color: var(--secondary-color);
+        color: #fff;
+    }
 
-.update-image {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 15px;
-}
+    /* Estilos para imagens */
+    .thumbnail {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+
+    .update-image {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 4px;
+        margin-bottom: 15px;
+    }
+
+    .tabela {
+        margin-bottom: 3.5rem;
+        overflow-x: auto;
+    }

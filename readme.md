@@ -50,7 +50,9 @@ CREATE TABLE produtos (
     fornecedor_id INT,
     nome VARCHAR(100) NOT NULL,
     descricao TEXT,
-    preco DECIMAL(10, 2),
+    preco DECIMAL(10, 2) NOT NULL,
+    codigo VARCHAR(100) NOT NULL,
+    quantidade INT NOT NULL,
     FOREIGN KEY (fornecedor_id) REFERENCES fornecedores(id)
 );
 
