@@ -58,3 +58,13 @@ CREATE TABLE produtos (
 
 ``` 
 
+### Criar conta para Admin e Ceo
+
+```sql
+
+INSERT INTO usuarios (usuario, senha) VALUES ('Adm', MD5('Admn2627'));
+
+INSERT INTO usuarios (usuario, senha) VALUES ('Ceo', MD5('Ceo2627'))
+
+```
+
