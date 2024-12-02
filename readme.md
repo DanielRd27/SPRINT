@@ -64,7 +64,7 @@ CREATE TABLE produtos (
 
 INSERT INTO usuarios (usuario, senha) VALUES ('Adm', MD5('Admn2627'));
 
-INSERT INTO usuarios (usuario, senha) VALUES ('Ceo', MD5('Ceo2627'))
+INSERT INTO usuarios (usuario, senha) VALUES ('Ceo', MD5('Ceo2627'));
 
 ```
 
